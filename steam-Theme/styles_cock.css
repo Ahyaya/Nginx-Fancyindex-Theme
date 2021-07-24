@@ -1,0 +1,351 @@
+html {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 32px;
+}
+body {
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 825px;
+    min-height:960px;
+    background: radial-gradient(50% 50% at 50% 50%, #FAD9A8 0%, #EEDFCF 100%);
+    color:#555;
+}
+#arxivName {
+    font-family: monospace;
+    text-align:center;
+    width:660px;
+    margin:auto;
+    font-size:20px;
+    font-weight:600;
+    color:#B0B0DC;
+    position:relative;
+    margin-top:30px;
+}
+@keyframes usrblink {
+    0%{
+	opacity:.9;
+    }
+    50%{
+	opacity:.89;
+    }
+    70%{
+	opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
+.cota {
+    cursor:default;
+}
+.hidden {
+    visibility:hidden;
+}
+#theme-icon {
+    position:absolute;
+    top:-8px;
+    left:60px;
+}
+#arxivName::before{
+    content:'';
+    padding:32px;
+    background:url('/Nginx-Fancyindex-Theme/steam-Theme/icons/cock.png') left center no-repeat;
+    position:relative;
+    top:-16px;
+    left:-12px;
+}
+#arxivName .cota::after{
+    content:'_';
+    font-weight:720;
+    margin-right:20px;
+    animation:usrblink 1.6s linear 0s infinite alternate;
+}
+thead {
+    font-weight: 200;
+    font-size: 18px;
+}
+h1 {
+    font-weight: 360;
+    text-align: center;
+    font-size: 16px;
+}
+a {
+    color:#323232;
+    text-decoration: none;
+}
+a:hover {
+    color:#6666bb;
+}
+a.clear, a.clear:link, a.clear:visited {
+    color: #363636;
+    padding: 2px 0;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 0 20px;
+    line-height: 14px;
+    display: inline-block;
+    border-bottom: transparent 1px solid;
+    vertical-align: -10px;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+input {
+    margin: 0 auto;
+    font-size: 100%;
+    vertical-align: middle;
+    *overflow: visible;
+    line-height: normal;
+    font-size: 12px;
+    font-weight: 300;
+    color: #888;
+    display: inline-block;
+    height: 20px;
+    padding: 4px 32px 4px 6px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 196px;
+    background-color: #000;
+    border: 1px solid #999;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border linear .2s,box-shadow linear .2s;
+    -moz-transition: border linear .2s,box-shadow linear .2s;
+    -o-transition: border linear .2s,box-shadow linear .2s;
+    transition: border linear .2s,box-shadow linear .2s;
+}
+input:focus {
+    outline: 0;
+    border-color:#b9b936;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,200,135,0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,200,135,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,200,135,0.6);
+}
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+#search {
+    color:black;
+    background-color:#E6E6FA;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    margin-top: 20px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+    -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+}
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+    max-width: 100%;
+    margin: 20px auto 0;
+    margin-bottom:40px;
+}
+tr {
+    outline: 0;
+    border: 0;
+}
+tr:hover {
+    box-shadow: 0px 0px 3px #333;
+}
+#list tr:first-of-type:hover {
+    box-shadow:none;
+}
+tr:hover td {
+    background-color: rgba(0,0,0,.08);
+}
+#list a[href^=".."]:hover {
+    color:white;
+}
+tr td:first-of-type {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+tr.parent a {
+    color: #9099A3;
+}
+th:first-of-type {
+    padding-left:10px;
+}
+th {
+    text-align: left;
+    font-size: 12px;
+    padding-right: 20px;
+    border-bottom:2px solid darkgrey;
+}
+th + th {
+    width: 25%;
+}
+th + th + th + th {
+    width: 5%;
+}
+td {
+    padding: 5px 0;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid darkgrey;
+    vertical-align: middle;
+    text-align: left;
+    cursor: default;
+    -webkit-transition: background 300ms ease-in;
+    -moz-transition: background 300ms ease-in;
+    -ms-transition: background 300ms ease-in;
+    -o-transition: background 300ms ease-in;
+    transition: background 300ms ease-in;
+}
+td:last-child,th:last-child {
+    text-align: right;
+    padding-right: 0;
+}
+td a {
+    display: block;
+}
+.parent a:hover {
+    color: #2a2a2a;
+}
+footer {
+    width:600px;
+    margin:auto;
+    position:relative;
+    font-size:12px;
+    text-align:center;
+    line-height: 24px;
+}
+footer a {
+    font-weight:600;
+    text-decoration: none;
+    color:#6666bb;
+}
+footer a:hover {
+    color:white;
+}
+footer img {
+    position:absolute;
+    left:-160px;
+    top:-16px;
+    width:150px;
+    visibility:hidden;
+}
+#me {
+    font-weight:600;
+    color:darkorange;
+}
+footer a:hover ~ img {
+    visibility:visible;
+}
+#list tr:hover a::before {
+    filter: invert(0.12);
+}
+#list tr:hover a[href$="/"]::before, #list tr:hover a[href*="/?"]::before {
+    filter: hue-rotate(40deg);
+}
+#list tr:hover a[href^=".."]::before {
+    filter: invert(0.1);
+}
+#list .link a::before{
+    content:"";
+    padding:16px;
+    margin-right:8px;
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/file.png') left center no-repeat;
+    filter: invert(0.32);
+}
+
+#list a[href$="/"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/folder.png') left center no-repeat;
+    filter: hue-rotate(-15deg);
+}
+#list a[href^=".."]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/log-out.png') left center no-repeat;
+    filter: invert(0.24);
+}
+
+#list a[href$=".doc"]::before, #list a[href$=".docx"]::before, #list a[href$=".odt"]::before, #list a[href$=".rtf"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/doc.png') left center no-repeat;
+}
+#list a[href$=".xls"]::before, #list a[href$=".xlsx"]::before, #list a[href$=".csv"]::before, #list a[href$=".ods"]::before, #list a[href$=".xlsm"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/xls.png') left center no-repeat;
+}
+#list a[href$=".pdf"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/pdf.png') left center no-repeat;
+}
+#list a[href$=".ppt"]::before, #list a[href$=".pptx"]::before, #list a[href$=".odp"]::before, #list a[href$=".odg"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/ppt.png') left center no-repeat;
+}
+#list a[href$=".zip"]::before, #list a[href$=".rar"]::before, #list a[href$=".7z"]::before, #list a[href$=".gz"]::before, #list a[href$=".bz"]::before, #list a[href$=".tar"]::before, #list a[href$=".xz"]::before, #list a[href$=".tgz"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/zip.png') left center no-repeat;
+}
+#list a[href$=".exe"]::before, #list a[href$=".out"]::before, #list a[href$=".rpm"]::before, #list a[href$=".sh"]::before, #list a[href$=".bat"]::before, #list a[href$=".o"]::before, #list a[href$=".pyx"]::before, #list a[href$=".class"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/exec.png') left center no-repeat;
+}
+#list a[href$=".m"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/m.png') left center no-repeat;
+}
+#list a[href$=".c"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/c.png') left center no-repeat;
+}
+#list a[href$=".h"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/h.png') left center no-repeat;
+}
+#list a[href$=".f"]::before, #list a[href$=".f90"]::before, #list a[href$=".f99"]::before, #list a[href$=".fortran"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/f.png') left center no-repeat;
+}
+#list a[href$=".cpp"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/cpp.png') left center no-repeat;
+}
+#list a[href$=".html"]::before, #list a[href$=".htm"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/html.png') left center no-repeat;
+}
+#list a[href$=".mat"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/mat.png') left center no-repeat;
+}
+#list a[href$=".script"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/script.png') left center no-repeat;
+}
+#list a[href$=".py"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/py.png') left center no-repeat;
+}
+#list a[href$=".php"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/php.png') left center no-repeat;
+}
+#list a[href$=".txt"]::before, #list a[href$=".tex"]::before, #list a[href$=".dat"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/txt.png') left center no-repeat;
+}
+#list a[href$=".css"]::before, #list a[href$=".cfg"]::before, #list a[href$=".conf"]::before, #list a[href$=".ini"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/configure.png') left center no-repeat;
+}
+#list a[href$=".nc"]::before, #list a[href$=".vpk"]::before, #list a[href$=".h5"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/database.png') left center no-repeat;
+}
+#list a[href$=".bsp"]::before, #list a[href$=".oem"]::before, #list a[href$=".spk"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/bsp.png') left center no-repeat;
+}
+
+#list a[href$=".jpg"]::before, #list a[href$=".jpeg"]::before, #list a[href$=".png"]::before, #list a[href$=".eps"]::before, #list a[href$=".svg"]::before, #list a[href$=".gif"]::before, #list a[href$=".bmp"]::before, #list a[href$=".tiff"]::before, #list a[href$=".ico"]::before, #list a[href$=".webp"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/jpg.png') left center no-repeat;
+}
+#list a[href$=".mp4"]::before, #list a[href$=".avi"]::before, #list a[href$=".mkv"]::before, #list a[href$=".flv"]::before, #list a[href$=".rmvb"]::before, #list a[href$=".f4v"]::before, #list a[href$=".mov"]::before, #list a[href$=".wmv"]::before, #list a[href$=".3gp"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/mp4.png') left center no-repeat;
+}
+#list a[href$=".mp3"]::before, #list a[href$=".wav"]::before, #list a[href$=".pcm"]::before, #list a[href$=".wma"]::before, #list a[href$=".ogg"]::before, #list a[href$=".mpeg"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/music.png') left center no-repeat;
+}
+#list a[href$=".stl"]::before, #list a[href$=".obj"]::before, #list a[href$=".stp"]::before, #list a[href$=".FCStd"]::before, #list a[href$=".amf"]::before, #list a[href$=".dwg"]::before {
+    background: url('/Nginx-Fancyindex-Theme/steam-Theme/icons/stl.png') left center no-repeat;
+}
