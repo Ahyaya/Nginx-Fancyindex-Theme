@@ -15,13 +15,14 @@ document.querySelector('h1').after(form);
 
 var indexContent=document.querySelectorAll("#list tbody tr");
 
-document.querySelectorAll("#list tbody tr a").forEach(
+indexContent.forEach(
 	function(item){
-		var fileNameIndex=item.href.lastIndexOf('\/')+1;
-		if(fileNameIndex<item.href.length){
-			item.id=decodeURI(item.href.substring(fileNameIndex,item.href.length).toUpperCase());
+		var fileHref=item.querySelector("td a").href;
+		var fileNameIndex=fileHref.lastIndexOf('\/',fileHref.length-2)+1;
+		if(fileNameIndex<fileHref.length){
+			item.id=decodeURI(fileHref.substring(fileNameIndex,fileHref.length).toUpperCase());
 		}else{
-			item.id=decodeURI(item.href.toUpperCase());
+			item.id=decodeURI(fileHref.toUpperCase());
 		}
 	}
 );
@@ -32,9 +33,9 @@ input.addEventListener('input', function () {
 		return;
 	}
 	indexContent.forEach(function(item){item.hidden=true;});
-	var inputword='#list tr td a[id*='+'\''+this.value.toUpperCase()+'\''+']';
+	var inputword='#list tr[id*='+'\''+this.value.toUpperCase()+'\''+']';
 	var myElements = document.querySelectorAll(inputword);
-	myElements.forEach(function(item) {item.parentNode.parentNode.hidden=false;});
+	myElements.forEach(function(item) {item.hidden=false;});
 });
 
 var imageSource=['https://cdn.cloudflare.steamstatic.com/error/huh.png',
