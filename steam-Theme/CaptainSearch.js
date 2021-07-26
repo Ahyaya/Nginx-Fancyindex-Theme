@@ -17,7 +17,12 @@ var indexContent=document.querySelectorAll("#list tbody tr");
 
 document.querySelectorAll("#list tbody tr a").forEach(
 	function(item){
-		item.id=decodeURI(item.href.substring(item.href.lastIndexOf('\/')+1,item.href.length).toUpperCase());
+		var fileNameIndex=item.href.lastIndexOf('\/')+1;
+		if(fileNameIndex<item.href.length){
+			item.id=decodeURI(item.href.substring(fileNameIndex,item.href.length).toUpperCase());
+		}else{
+			item.id=decodeURI(item.href.toUpperCase());
+		}
 	}
 );
 
